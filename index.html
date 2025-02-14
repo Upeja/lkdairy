@@ -459,6 +459,7 @@
     font-size: 50px; /* Resizes the h6 text */
     font-weight: bold;
     color: #068c44 !important; /* Optional: Gold color */
+    line-height: 1;
 }
 
 .stats-section p {
@@ -468,15 +469,48 @@
     line-height: 1;
 }
 
+.news-item { 
+    margin-bottom: 30px;
+}
 
-.news-item {
-        padding-bottom: 15px;
-        
-        margin-bottom: 15px;
-    }
-    .news-item:last-child {
-        border-bottom: none;
-    }
+.news-thumbnail {
+    max-width: 100px;
+    margin: 20px;
+    display: inline-block;
+    margin-right: 20px; /* Add gap between image and content */
+}
+
+
+
+.news-item { 
+    margin-bottom: 30px;
+    padding-bottom: 20px; /* Optional, to give space between the line and the content */
+
+}
+
+.col-md-12 {
+    border-bottom: 2px solid #ccc; /* Adds a line below both image and content */
+    padding-bottom: 20px; /* Optional, to give space between the line and content */
+    margin-bottom: 30px; /* Optional, adds some space between news items */
+}
+
+.col-md-4 {
+    padding-right: 20px; /* Adds gap between image and text */
+}
+
+.news-thumbnail img {
+    width: 100%;
+    height: auto;
+    margin: 20px 0; /* Optional, if you want to add some margin around the image */
+}
+
+
+.news-thumbnail img {
+    width: 100%;
+    height: auto;
+    margin: 20px 0; /* Optional, if you want to add some margin around the image */
+}
+
     .footer {
     background-color: #088c3c;
     color: white;
@@ -690,11 +724,11 @@
             <div class="col-md-3">
                 <img src="Images/01.png" alt="Award Icon" class="mb-2" style="width: 80px; height: 80px;">
                 <h6 class="text-warning">29 Years</h6>
-                <p>Instead of Certified Standards put Years of caring</p>
+                <p>Serving Sri Lankan Consumers</p>
             </div>
             <div class="col-md-3">
                 <img src="Images/02.png" alt="Industry Icon" class="mb-2" style="width: 80px; height: 80px;">
-                <h6 class="text-warning">554600BN</h6>
+                <h6 class="text-warning">5.5 Billion</h6>
                 <p>Production Scale</p>
             </div>
             <div class="col-md-3">
@@ -704,8 +738,8 @@
             </div>
             <div class="col-md-3">
                 <img src="Images/04.png" alt="Cow Icon" class="mb-2" style="width: 80px; height: 80px;">
-                <h6 class="text-warning">20 M</h6>
-                <p>Milk Production</p>
+                <h6 class="text-warning">20 Million Liters</h6>
+                <p>Annual Milk Production</p>
             </div>
         </div>
     </div>
@@ -717,31 +751,66 @@
         <div class="container news-section mt-5">
             <h2 class="text-center mb-4">News and Events</h2>
             <div class="row">
-                <div class="col-md-6">
-                    <img src="Images/ambewelafarms.png" alt="News Image" class="img-fluid rounded">
+                <!-- News Item 1 -->
+                <div class="col-md-12 d-flex mb-4">
+                    <!-- Thumbnail Image on the Left -->
+                    <div class="col-md-4">
+                        <img src="Images/dji.jpg" alt="Thumbnail Image" class="img-fluid rounded">
+                    </div>
+                    <!-- News Content on the Right -->
+                    <div class="col-md-8">
+                        <div class="news-item">
+                            <h5 class="mt-6">December 24, 2024</h5>
+                            <p><strong>Ambewela Farms Achieves Record-Breaking Daily Milk Production of 60,000 Litres</strong></p>
+                            <p onclick="openArticle(1)" style="cursor: pointer; color: rgb(0, 0, 0); text-decoration: none;">
+                                Ambewela Farms achieves record 62,000L daily milk production, showcasing modernization, innovation, and national dairy growth....
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="news-item">
-                        <h5 class="mt-6">March 26, 2024</h5>
-                        <p><strong>Lorem Ipsum is simply dummy text</strong></p>
-                        <p>Lorem Ipsum is simply dummy text of the printing industry...</p>
+    
+                <!-- News Item 2 -->
+                <div class="col-md-12 d-flex mb-4">
+                    <!-- Thumbnail Image on the Left -->
+                    <div class="col-md-4">
+                        <img src="Images/cheesenews.jpg" alt="Thumbnail Image" class="img-fluid rounded">
                     </div>
-                    <hr>
-                    <div class="news-item">
-                        <h5 class="mt-6">March 27, 2024</h5>
-                        <p><strong>New Dairy Products Launch</strong></p>
-                        <p>We are introducing a new range of organic dairy products...</p>
+                    <!-- News Content on the Right -->
+                    <div class="col-md-8">
+                        <div class="news-item">
+                            <h5 class="mt-6">February 09, 2025</h5>
+                            <p><strong>Discover Ambewela’s Newly Relaunched Cheese Range</strong></p>
+                            <p onclick="openArticle(2)" style="cursor: pointer; color: rgb(0, 0, 0); text-decoration: none;">
+                                Ambewela relaunches cheese range with new packaging, diverse flavors, and world-class local dairy quality...
+                            </p>
+                        </div>
                     </div>
-                    <hr>
-                    <div class="news-item">
-                        <h5 class="mt-6">April 2, 2024</h5>
-                        <p><strong>Health & Nutrition Conference</strong></p>
-                        <p>Join us for a seminar on the importance of dairy nutrition...</p>
+                </div>
+    
+                <!-- News Item 3 -->
+                <div class="col-md-12 d-flex mb-4">
+                    <!-- Thumbnail Image on the Left -->
+                    <div class="col-md-4">
+                        <img src="Images/president.jpg" alt="Thumbnail Image" class="img-fluid rounded">
+                    </div>
+                    <!-- News Content on the Right -->
+                    <div class="col-md-8">
+                        <div class="news-item">
+                            <h5 class="mt-6">June 28, 2024</h5>
+                            <p><strong>President’s Visit Ignites Ambewela Dairy Farm’s Next Big Leap in Milk Production</strong></p>
+                            <p onclick="openArticle(3)" style="cursor: pointer; color: rgb(0, 0, 0); text-decoration: none;">
+                                President Wickremesinghe visits Ambewela Dairy Farm, highlighting its advancements and commitment to growth...
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    
+    
+    
+    
     
     <footer class="footer">
         <div class="container">
@@ -759,6 +828,11 @@
             <p class="copyright">© 2025 LANKA DAIRIES. ALL RIGHTS RESERVED</p>
         </div>
     </footer>
+    <script>
+        function openArticle(articleId) {
+            window.location.href = `news-details.html?article=${articleId}`;
+        }
+    </script>
 
     <script>
         console.log("Navbar loaded");
