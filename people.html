@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About LMF</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8fcdc;
+        }
+        .navbar {
+  background-color: #8bc34a; /* Green color */
+  display: flex;
+  align-items: center;
+  padding: 0px 20px;
+}
+
+.logo {
+    height: 80px;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  margin-right: auto;
+  margin-top: -5px;
+  margin-bottom: -10px;
+  border-radius: 5px;
+  margin-left: 30px;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-item a {
+  display: block;
+  padding: 10px 15px;
+  color: white;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.nav-item a:hover {
+  background-color: #689f38; /* Darker green on hover */
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #8bc34a;
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  min-width: 150px;
+  z-index: 1000;
+}
+
+.dropdown li a {
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  display: block;
+  transition: background 0.3s;
+}
+
+.dropdown li a:hover {
+  background-color: #558b2f;
+}
+
+.nav-item:hover .dropdown {
+  display: block;
+}
+.hero {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+.hero img {
+    max-width: 100vw; /* Maximum width: full viewport width */
+    max-height: 100vh; /* Maximum height: full viewport height */
+    object-fit: contain; /* Maintain aspect ratio while covering the container */
+}
+      
+.hero-text {
+            position: absolute;
+            top: 85%;
+            left: 900px;
+            right: -300px;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+        }
+        .hero-text h1{
+            font-size: 3rem;
+            font-weight: bold;
+        }
+    .full-width-info-section {
+        padding: 50px 0;
+        background: url('Images/dark1.jpg') center/cover no-repeat;
+        background-size: cover;
+        width: 100vw;
+        color: white; /* Ensures text is readable on the background */
+    }
+    .info-section .content {
+    max-width: 1140px;
+    margin: 0 auto;
+    text-align: center;
+    }
+
+    .info-section h2 {
+        font-weight: bold;
+    }
+    .info-section p {
+        font-size: 1.1rem;
+    }
+    .card-container {
+      display: flex;
+      justify-content: space-between;
+      padding: 200px;
+      background-color: #f8fcdc;
+      height: 510px;
+    }
+    .card-column {
+      position: relative;
+      width: 48%;
+    }
+    .custom-card {
+      background: #e8f4d4;
+      border-radius: 8px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+      height: 300px;
+      margin-bottom: 0px;
+      position: absolute;
+      width: 100%;
+    }
+    .custom-card h5 {
+      font-weight: bold;
+      color: #4b8b3b;
+      margin-bottom: 10px;
+    }
+    .custom-card p {
+      color: #555;
+      font-size: 14px;
+    }
+    .custom-card img {
+            width: 150px; /* Adjust width as needed */
+            height: auto;
+            display: block;
+            margin: 10px auto; /* Centers the image */
+        }
+    /* Left column cards positioning (upside-down staircase effect) */
+    .left .card1 { bottom: -10px; left: -140px;; z-index: 1; }
+    .left .card2 { bottom: -90px; left:-80px; z-index: 2; }
+    .left .card3 { bottom: -170px; left:-20px; z-index: 3; }
+    /* Right column cards positioning (upside-down staircase effect) */
+    .right .card4 { bottom: -10px; right:-140px; z-index: 1; }
+    .right .card5 { bottom: -90px; right:-80px; z-index: 2; }
+    .right .card6 { bottom: -170px; right:-20px; z-index: 3; }
+    
+    .footer {
+            background-color: #088c3c;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer-nav a {
+            color: #ffffff;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        .footer-nav a.active,
+        .footer-nav a:hover {
+            color: #a6ff00;
+            /* Highlighted Green */
+        }
+
+        .copyright {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+</style>
+</head>
+<body>
+    
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="Images/logo.jpg" alt="Dairy Brand Logo" class="logo me-2"> 
+        </a>
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="index.html">Home</a></li>
+          <li class="nav-item">
+            <a href="#">About Us</a>
+            <ul class="dropdown">
+              <li><a href="history.html">History</a></li>
+              <li><a href="focus.html">Focus</a></li>
+              <li><a href="people.html">People</a></li>
+              <li><a href="#">Our Farms</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#">Products</a>
+            <ul class="dropdown">
+              <li><a href="freshmilk.html">Fresh Milk</a></li>
+              <li><a href="flavored.html">Flavoured Milk</a></li>
+              <li><a href="cheese.html">Cheese & Butter</a></li>
+              <li><a href="yoghurt.html">Yoghurt</a></li>
+              <li><a href="juices.html">Juices</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#">Brands</a>
+            <ul class="dropdown">
+              <li><a href="#">Ambewela</a></li>
+              <li><a href="#">Daily</a></li>
+              <li><a href="#">My Juicee</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="subsidiaries.html">Subsidiaries</a>
+          </li>
+          <li class="nav-item">
+            <a href="#">Innovation</a>
+          </li>
+          <li class="nav-item">
+            <a href="#">News Center</a>
+          </li>
+          <li class="nav-item">
+            <a href="#">Investor Relations</a>
+            <ul class="dropdown">
+              <li><a href="#">Board of Directors</a></li>
+              <li><a href="#">Reports</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section text-center">
+        <img src="Images/slide2nw.jpg" alt="Cows in a field">
+        <div class="hero-text">
+            <h1>LIFE AT LMF</h1>
+        </div>
+    </div>
+
+    <!-- Science and Innovation Section -->
+    <div class="full-width-info-section">
+        <div class="container text-center">
+            <h2 class="mb-5"> Employees are the driving force at LMF</h2>
+            <p> Employees are the driving force at LMF. The company encourages diversity among its employees to create a dynamic team that thrives in any given 
+                situation.  Currently the LMF team consists of over 700 of individuals from different walks of life with unique skill sets.  The contribution by each employee 
+                is highly valued and their inputs are appreciated in the process of setting goals and objectives. This inclusive culture ensures that the entire team is driven 
+                towards a single mission envisioned by the brand.</p>
+        </div>
+    </div>
+    <div class="container card-container">
+        <div class="card-column left">
+          <div class="custom-card card1">
+            <h5>COMPETITIVE REMUNERATION</h5>
+          </div>
+          <div class="custom-card card2">
+            <h5>CAREER GROWTH OPPORTUNITIES</h5>
+          </div>
+          <div class="custom-card card3 text-center p-3 border rounded shadow">
+            
+            <h5>WELFARE MEASURES</h5>
+            <img src="Images/welfare.png" alt="Welfare Measures">
+            <p>The well-being of employees is considered of utmost importance at LMF.</p>
+          </div>
+        </div>
+        <div class="card-column right">
+          <div class="custom-card card4">
+            <h5>WORK-LIFE BALANCE</h5>
+          </div>
+          <div class="custom-card card5">
+            <h5>HEALTH AND SAFETY MEASURES</h5>
+            
+          </div>
+          <div class="custom-card card6 text-center p-3 border rounded shadow">
+            <h5>OPEN DOOR POLICY</h5>
+            <img src="Images/openhand.png" alt="Open Door Icon">
+            <p>Communication is made easy and transparent within the company.</p>
+        </div>
+        </div>
+      </div>
+      
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <nav class="footer-nav">
+                <a href="index.html">Home</a>
+                <a href="">About Us</a>
+                <a href="" >Products</a>
+                <a href="" class="active">Innovation</a>
+                <a href="">Careers</a>
+                <a href="">Subsidiaries</a>
+                <a href="#">News Center</a>
+                <a href="#">Investor Relations</a>
+                <a href="#">Contact Us</a>
+            </nav>
+            <p class="copyright">© 2025 LANKA DAIRIES. ALL RIGHTS RESERVED</p>
+        </div>
+    </footer>
+    <script>
+    $(document).ready(function () {
+        $(".footer-nav a").click(function () {
+            $(".footer-nav a").removeClass("active");
+            $(this).addClass("active");
+        });
+    });
+</script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
