@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About History</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8fcdc;
+        }
+        .navbar {
+  background-color: #8bc34a; /* Green color */
+  display: flex;
+  align-items: center;
+  padding: 0px 20px;
+}
+
+.logo {
+    height: 80px;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  margin-right: auto;
+  margin-top: -5px;
+  margin-bottom: -10px;
+  border-radius: 5px;
+  margin-left: 30px;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-item a {
+  display: block;
+  padding: 10px 15px;
+  color: white;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.nav-item a:hover {
+  background-color: #689f38; /* Darker green on hover */
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #8bc34a;
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  min-width: 150px;
+  z-index: 1000;
+}
+
+.dropdown li a {
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  display: block;
+  transition: background 0.3s;
+}
+
+.dropdown li a:hover {
+  background-color: #558b2f;
+}
+
+.nav-item:hover .dropdown {
+  display: block;
+}
+.hero {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+.hero img {
+    max-width: 100vw; /* Maximum width: full viewport width */
+    max-height: 100vh; /* Maximum height: full viewport height */
+    object-fit: contain; /* Maintain aspect ratio while covering the container */
+}
+      
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+        }
+        .hero-text h1{
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+    .full-width-info-section {
+        padding: 50px 0;
+        background: url('Images/dark1.jpg') center/cover no-repeat;
+        background-size: cover;
+        width: 100vw;
+        color: white; /* Ensures text is readable on the background */
+    }
+    .info-section .content {
+    max-width: 1140px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+    .info-section h2 {
+        font-weight: bold;
+    }
+    .info-section p {
+        font-size: 1.1rem;
+    }
+    h2 {
+  color: #068c44;
+  font-weight: bold;
+}
+h3 {
+  color: white;
+  font-weight: bold;
+}
+
+.timeline {
+  position: relative;
+  padding: 20px 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 4px;
+  height: 100%;
+  background: #068c44;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.timeline-item.left .content {
+  margin-right: auto;
+  text-align: justify;
+  max-width: 400px;
+  
+}
+
+.timeline-item.right .content {
+  margin-left: auto;
+  text-align: justify;
+  max-width: 400px;
+}
+
+.timeline-item.bottom .content {
+  text-align: justify;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.timeline-item .content h5 {
+  font-size: 1.4rem;  /* Heading size for each timeline event */
+  color: #068c44;    /* Slightly darker green */
+  font-weight: 400;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.timeline-item .content p {
+  font-size: 1rem;   /* Paragraph text size */
+  color: #222222;       /* Soft gray for better readability */
+  line-height: 1.6;  /* Improved line spacing */
+  margin-bottom: 10px;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+
+
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: #068c44;
+  border-radius: 50%;
+  border: 4px solid white;
+  z-index: 1;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.timeline-item.left::after,
+.timeline-item.right::after,
+.timeline-item.bottom::after {
+  top: 20px;
+}
+
+.timeline-item .content {
+  background: #f8fcdc;
+  border-radius: 10px;
+  
+  padding: 20px;
+  z-index: 1;
+}
+
+.timeline-item .content img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+.dotted-line-left,
+    .dotted-line-right {
+      position: absolute;
+      top: 20px;
+      border-top: 2px dotted #068c44;
+      width: 50px;
+    }
+    .dotted-line-left {
+      left: calc(50% - 60px);
+    }
+    .dotted-line-right {
+      left: calc(50% + 4px);
+    }
+    .timeline-year-left,
+    .timeline-year-right {
+      font-weight: bold;
+      font-size: 1.4rem;
+      color: #068c44;
+      margin: 15px;
+    }
+    .timeline-year-left {
+      position: absolute;
+      top: 12px;
+      left: calc(50% - 110px);
+      margin: 15px;
+    }
+    .timeline-year-right {
+      position: absolute;
+      top: 12px;
+      left: calc(50% + 60px);
+    }
+.footer {
+            background-color: #088c3c;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer-nav a {
+            color: #ffffff;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        .footer-nav a.active,
+        .footer-nav a:hover {
+            color: #a6ff00;
+            /* Highlighted Green */
+        }
+
+        .copyright {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+</style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="Images/logo.jpg" alt="Dairy Brand Logo" class="logo me-2"> 
+        </a>
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="index.html">Home</a></li>
+          <li class="nav-item">
+            <a href="#">About Us</a>
+            <ul class="dropdown">
+              <li><a href="history.html">History</a></li>
+              <li><a href="focus.html">Focus</a></li>
+              <li><a href="people.html">People</a></li>
+              <li><a href="#">Our Farms</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#">Products</a>
+            <ul class="dropdown">
+              <li><a href="freshmilk.html">Fresh Milk</a></li>
+              <li><a href="flavored.html">Flavoured Milk</a></li>
+              <li><a href="cheese.html">Cheese & Butter</a></li>
+              <li><a href="yoghurt.html">Yoghurt</a></li>
+              <li><a href="juices.html">Juices</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#">Brands</a>
+            <ul class="dropdown">
+              <li><a href="#">Ambewela</a></li>
+              <li><a href="#">Daily</a></li>
+              <li><a href="#">My Juicee</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#">Subsidiaries</a>
+          </li>
+          <li class="nav-item">
+            <a href="#">Innovation</a>
+          </li>
+          <li class="nav-item">
+            <a href="#">News Center</a>
+          </li>
+          <li class="nav-item">
+            <a href="#">Investor Relations</a>
+            <ul class="dropdown">
+              <li><a href="#">Board of Directors</a></li>
+              <li><a href="#">Reports</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section text-center">
+        <img src="Images/slide2nw.jpg" alt="Cows in a field">
+        <div class="hero-text">
+            <h1></h1>
+        </div>
+    </div>
+
+    <!-- Science and Innovation Section -->
+    <div class="full-width-info-section">
+        <div class="container text-center">
+            <h3 class="mb-5"> OUR FOUNDING STORY</h3>
+            <p> Lanka Milk Foods (CWE) PLC is a local brand with a proud history of over 40 years.  It has been committed to providing wholesome nutrition to generations of Sri Lankans through its wide variety 
+                of products and services. For years the brand has been consistently growing to compete against global and regional giants.  First established for packeting and distribution of imported milk 
+                powder, the brand has since then progressed to becoming one of the most innovative beverage and dairy product providers in the country. It is also home to the largest packing plant in South 
+                East Asia.
+                 Today, Lanka Milk Foods (CWE) PLC is more than a mere service provider, but a trusted name across the nation that transforms the lives of all its stakeholders by providing opportunities for 
+                economic growth and sustainability</p>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <h2 class="text-center mb-4">OUR FOUNDING STORY</h2>
+        <div class="timeline">
+          <!-- First item (Left) -->
+          <div class="timeline-item right">
+            <div class="dotted-line-right"></div>
+          <div class="timeline-year-right">1996</div>
+            <div class="content">
+              <img src="Images/ambewelafarms.png" alt="Lanka Diaries">
+              <h5>Lanka Diaries (Pvt) Ltd (1996)</h5>
+              <p>A subsidiary named Lanka Diaries (Pvt) Ltd was established where milk in 2001 was packed in flavored liquid milk utilizing the UHT Tetra pack technology. It is the first company in Sri Lanka to do so.</p>
+              
+            </div>
+          </div>
+          
+          <!-- Second item (Right) -->
+          <div class="timeline-item left">
+            <div class="dotted-line-left"></div>
+          <div class="timeline-year-left">2001</div>
+            <div class="content">
+              <img src="Images/ambewelafarms.png" alt="Farms">
+              <h5>The New Zealand and Ambewela Farms (2001)</h5>
+              <p>The New Zealand and Ambewela farms in Nuwara Eliya were brought over from the government. These farms are among the largest farms in the country up to date.</p>
+              
+            </div>
+          </div>
+          
+          <!-- Third item (Center/Down) -->
+          <div class="timeline-item bottom">
+            <div class="content">
+              <img src="Images/ambewelafarms.png" alt="Ambewela Products">
+              <h5>Ambewela Products (Pvt) Ltd (2009)</h5>
+              <p>A new subsidiary established under Ambewela Products (Pvt) Ltd.</p>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <nav class="footer-nav">
+              <a href="index.html">Home</a>
+              <a href="" class="active">About Us</a>
+              <a href="" >Products</a>
+              <a href="">Innovation</a>
+              <a href="">Careers</a>
+              <a href="">Subsidiaries</a>
+              <a href="#">News Center</a>
+              <a href="#">Investor Relations</a>
+              <a href="#">Contact Us</a>
+            </nav>
+            <p class="copyright">© 2025 LANKA DAIRIES. ALL RIGHTS RESERVED</p>
+        </div>
+    </footer>
+  <script>
+      $(document).ready(function () {
+        $(".footer-nav a").click(function () {
+            $(".footer-nav a").removeClass("active");
+            $(this).addClass("active");
+        });
+    });
+  </script>
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
