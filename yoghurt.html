@@ -84,26 +84,47 @@
 .nav-item:hover .dropdown {
   display: block;
 }
-        .hero {
-            position: relative;
-        }
+.hero {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
 
-        .hero img {
+.hero-section {
+            position: relative;
             width: 100%;
-            height: auto;
+            height: 100vh;
+            overflow: visible;
+        }
+        .hero-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
             object-fit: cover;
         }
-        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+        }
         .hero-text {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            text-align: center;
             color: white;
-        }
-        .hero-text h1{
-            font-size: 3rem;
+            font-size: 2rem;
             font-weight: bold;
         }
 
@@ -287,7 +308,7 @@
             <li class="nav-item">
                 <a href="index.html">Home</a></li>
           <li class="nav-item">
-            <a href="#">About Us</a>
+            <a href="aboutus.html">About Us</a>
             <ul class="dropdown">
               <li><a href="history.html">History</a></li>
               <li><a href="focus.html">Focus</a></li>
@@ -296,7 +317,7 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a href="#">Products</a>
+            <a href="products.html">Products</a>
             <ul class="dropdown">
               <li><a href="freshmilk.html">Fresh Milk</a></li>
               <li><a href="flavored.html">Flavoured Milk</a></li>
@@ -338,50 +359,45 @@
 
     <!-- Hero Section -->
     <div class="hero-section text-center">
-        <img src="Images/subs.jpg" alt="Cows in a field">
-        <div class="hero-text">
-            <h1>Premium Product Line to perfection</h1>
-        </div>
+        <video class="hero-video" autoplay muted loop>
+            <source src="video/productstvc.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     </div>
     <div class="container mt-5">
         <!-- Top Section: Display Selected Product -->
         
         <div class="top-section">
-            <img src="Images/cheese2.png" alt="Main Cheese" class="main-image">
+            <img src="Images/yoghurt.png" alt="Main Cheese" class="main-image">
             <div class="header-section">
-                <div class="product-header">Ambewela Cheese</div>
+                <div class="product-header">Yoghurt</div>
                 <div class="product-images">
                     <div class="product-item">
-                        <img src="Images/edam.png" alt="Edam Cheese">
-                        <p>Edam <br>Cheese</p>
+                        <img src="" alt="">
+                        <p></p>
                     </div>
                     <div class="product-item">
-                        <img src="Images/gauda.png" alt="Gouda Cheese">
-                        <p>Gouda <br>Cheese</p>
+                        <img src="" alt="">
+                        <p></p>
                     </div>
                     <div class="product-item">
-                        <img src="Images/proceed.png" alt="Ambewela Cheese">
-                        <p>Ambewela<br> Cheese</p>
+                        <img src="" alt="Ambewela Cheese">
+                        <p></p>
                     </div>
                     <div class="product-item">
-                        <img src="Images/parmesan.png" alt="Parmesan Cheese">
-                        <p>Parmesan<br> Cheese</p>
+                        <img src="" alt="">
+                        <p></p>
                     </div>
                 </div>
             </div>
         </div>
             <div class="content-section">
                 <div class="product-description">
-                    Cheeses are produced both at the New Zealand farm in Pattipola and Ambewela Products Pvt Ltd in Ambewela. We use milk sourced only from Ambewela in the process to ensure the highest quality standards thus delivering on the brand promise to the consumers. The modern state-of-the-art factory has the capability of producing cheese in mass scale using mechanized processors. However, the types of cheeses produced in a more European pallet as APPL caters to the hospitality sector than the domestic market. APPL produces the following varieties of cheese. The flavor, texture, weight, size and quality can be managed better in this form of mechanized production process.
+                     
+In a remarkable journey of culinary innovation, Ambewela Products (Pvt) Ltd introduced Ambewela Set yoghurt to the world in 2009. It is an 80ml cup renowned for its unrivalled flavour, serene colour, velvety texture, and remarkable nutritional profile. It is also available as a family pack variant.
+
                 </div>
-                <div class="pack-info">
-                    <div class="pack-sizes">Pack Sizes</div>
-                    <div class="pack-details">
-                        Cheese Slices (Edam) - kg<br>
-                        Cheese Slices (Gouda) - kg<br>
-                        Ambewela Cheese (Spread) - 50ml
-                    </div>
-                </div>
+                
             </div>
             <div class="button-container">
                 <a href="#" class="inquire-button">Inquire More</a>

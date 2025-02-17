@@ -87,24 +87,47 @@
             display: block;
         }
 
-        .hero img {
-            max-width: 100vw; /* Maximum width: full viewport width */
-            max-height: 100vh; /* Maximum height: full viewport height */
-            object-fit: contain; /* Maintain aspect ratio while covering the container */
-        }
+        .hero {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
 
+.hero-section {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: visible;
+        }
+        .hero-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+        }
         .hero-text {
             position: absolute;
-            top: 85%;
-            left: 900px;
-            right: -300px;
+            top: 50%;
+            left: 50%;
             transform: translate(-50%, -50%);
-            text-align: center;
             color: white;
-        }
-
-        .hero-text h1 {
-            font-size: 3rem;
+            font-size: 2rem;
             font-weight: bold;
         }
 
@@ -219,7 +242,7 @@
         <li class="nav-item">
             <a href="index.html">Home</a></li>
       <li class="nav-item">
-        <a href="#">About Us</a>
+        <a href="aboutus.html">About Us</a>
         <ul class="dropdown">
           <li><a href="history.html">History</a></li>
           <li><a href="focus.html">Focus</a></li>
@@ -228,7 +251,7 @@
         </ul>
       </li>
       <li class="nav-item">
-        <a href="#">Products</a>
+        <a href="products.html">Products</a>
         <ul class="dropdown">
           <li><a href="freshmilk.html">Fresh Milk</a></li>
           <li><a href="flavored.html">Flavoured Milk</a></li>
@@ -268,12 +291,12 @@
   </nav>
 
 
-    <div class="hero-section text-center">
-        <img src="Images/slide2nw.jpg" alt="Cows in a field">
-        <div class="hero-text">
-            <h1>Brands</h1>
-        </div>
-    </div>
+  <div class="hero-section text-center">
+    <video class="hero-video" autoplay muted loop>
+        <source src="video/productstvc.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
 
     <!-- Brands Section -->
     <div class="container subsidiaries-section">
@@ -281,7 +304,7 @@
 
         <div class="subsidiary row">
             <div class="col-md-6">
-                <img src="Images/ambewela.png" alt="Ambewela">
+                <img src="Images/amb.png" alt="Ambewela">
             </div>
             <div class="col-md-6 subsidiary-content">
                 <div class="subsidiary-title">AMBEWELA</div>
@@ -294,7 +317,7 @@
 
         <div class="subsidiary row">
             <div class="col-md-6 order-md-2">
-                <img src="Images/daily.png" alt="Pattipola Farm">
+                <img src="Images/dly.png" alt="Pattipola Farm">
             </div>
             <div class="col-md-6 order-md-1 subsidiary-content">
                 <div class="subsidiary-title">DAILY</div>
@@ -307,7 +330,7 @@
 
         <div class="subsidiary row">
             <div class="col-md-6">
-                <img src="Images/myjuiceelogo.png" alt="Ambewela Products">
+                <img src="Images/myjuiceenw.png" alt="Ambewela Products">
             </div>
             <div class="col-md-6 subsidiary-content">
                 <div class="subsidiary-title">MY JUICEE</div>

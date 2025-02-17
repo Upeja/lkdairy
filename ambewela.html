@@ -86,6 +86,89 @@
         .nav-item:hover .dropdown {
             display: block;
         }
+        .hero {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+.hero-section {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: visible;
+        }
+        .hero-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+        }
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        h1 {
+    color: #068c44; /* Dark green color */
+    font-size: 2.5rem; /* Font size */
+    font-weight: bold;
+    margin-bottom: 20px; /* Bottom margin */
+}
+
+p {
+    color: #333; /* Dark gray color */
+    font-size: 1rem; /* Font size */
+    line-height: 1.6; /* Line height */
+    margin-bottom: 15px; /* Bottom margin */
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.img-fluid {
+    max-width: 600px;
+    height: auto;
+    margin-top: -50px;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem !important;
+    
+}
+
+.mb-2 {
+    margin-bottom: 0.5rem !important;
+    margin-top: 10px;
+}
+
+.mt-5 {
+    margin-top: 3rem !important;
+}
+
         .footer {
             background-color: #088c3c;
             color: white;
@@ -124,7 +207,7 @@
             <li class="nav-item">
                 <a href="index.html">Home</a></li>
           <li class="nav-item">
-            <a href="#">About Us</a>
+            <a href="aboutus.html">About Us</a>
             <ul class="dropdown">
               <li><a href="history.html">History</a></li>
               <li><a href="focus.html">Focus</a></li>
@@ -133,7 +216,7 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a href="#">Products</a>
+            <a href="products.html">Products</a>
             <ul class="dropdown">
               <li><a href="freshmilk.html">Fresh Milk</a></li>
               <li><a href="flavored.html">Flavoured Milk</a></li>
@@ -171,8 +254,54 @@
           </li>
         </ul>
       </nav>
-    
-
+      <div class="hero-section text-center">
+        <video class="hero-video" autoplay muted loop>
+            <source src="video/productstvc.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <section class="container my-5"></section>
+        <h1 class="text-center mb-4">Ambewela</h1>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <img src="Images/amb.png" alt="Ambewela Main Image" class="img-fluid mb-4">
+            </div>
+            <div class="col-md-12">
+                <p class="text-center">The Ambewela brand, synonymous with premium dairy nutrition, has become a trusted household name in Sri Lanka. Sourced from the lush, fertile pastures of Ambewela Farms, its dairy products embody freshness, purity, and uncompromising quality. As a pioneer in modern dairy farming, Ambewela stands as a symbol of excellence, integrating advanced farming techniques to uphold its commitment to producing the healthiest and highest-quality dairy products.<br>
+                    Ambewela’s liquid milk range includes Ambewela Full Cream Milk and Ambewela Non-Fat Milk, both UHT-processed and aseptically packaged in Tetra Brik Aseptic packs with resealable caps to meet the evolving needs of today’s consumers. These products are available in 200ml and one-litre packs, along with a 450ml pouch pack for added convenience.<br>
+                    Ambewela Flavoured Milk is another popular choice among Sri Lankan consumers. Offered in one-litre and 180ml packs, it comes in classic chocolate and vanilla flavors, delivering a rich and indulgent taste experience.<br>
+                    Continuing its legacy of dairy innovation, Ambewela Products (Pvt) Ltd introduced Ambewela Set Yogurt in 2009. This 80g cup is celebrated for its smooth texture, delicate color, and balanced nutritional profile. Expanding on this success, the brand recently introduced Jelly Yogurt, a delightful combination of creamy yogurt layered with strawberry jelly. Additionally, Ambewela’s butter has been relaunched with a fresh, modern packaging design.<br>
+                    For those with a taste for gourmet dairy, Ambewela offers an exclusive range of artisanal cheeses, crafted using fresh milk sourced directly from its own farms. These cheeses are produced using traditional cottage cheese-making techniques, ensuring authenticity and superior quality for the local market.
+                    </p>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-4 text-center">
+                <img src="Images/frs.png" alt="Fresh Milk" class="img-fluid mb-2">
+                <p>Fresh Milk</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <img src="Images/chc.png" alt="Flavored Milk" class="img-fluid mb-2">
+                <p>Flavored Milk</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <img src="Images/cheessee.png" alt="Cheese & Butter" class="img-fluid mb-2">
+                <p>Cheese</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <img src="Images/ygrt.png" alt="Yoghurt" class="img-fluid mb-2">
+                <p>Yoghurt</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <img src="Images/butter.png" alt="Juices" class="img-fluid mb-2">
+                <p>Butter</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <img src="Images/drinking.png" alt="Juices" class="img-fluid mb-2">
+                <p>drinking Yoghurt</p>
+            </div>
+        </div>
+    </section>
     <footer class="footer">
         <nav class="footer-nav">
             <a href="index.html" class="active">Home</a>
