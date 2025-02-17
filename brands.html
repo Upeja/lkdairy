@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brands</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8fcdc;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background-color: #8bc34a; /* Green color */
+            display: flex;
+            align-items: center;
+            padding: 0px 20px;
+        }
+
+        .logo {
+            height: 80px;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            margin-right: auto;
+            margin-top: -5px;
+            margin-bottom: -10px;
+            border-radius: 5px;
+            margin-left: 30px;
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-item a {
+            display: block;
+            padding: 10px 15px;
+            color: white;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .nav-item a:hover {
+            background-color: #689f38; /* Darker green on hover */
+        }
+
+        .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #8bc34a;
+            display: none;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            min-width: 150px;
+            z-index: 1000;
+        }
+
+        .dropdown li a {
+            padding: 10px;
+            color: white;
+            text-decoration: none;
+            display: block;
+            transition: background 0.3s;
+        }
+
+        .dropdown li a:hover {
+            background-color: #558b2f;
+        }
+
+        .nav-item:hover .dropdown {
+            display: block;
+        }
+
+        .hero img {
+            max-width: 100vw; /* Maximum width: full viewport width */
+            max-height: 100vh; /* Maximum height: full viewport height */
+            object-fit: contain; /* Maintain aspect ratio while covering the container */
+        }
+
+        .hero-text {
+            position: absolute;
+            top: 85%;
+            left: 900px;
+            right: -300px;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .subsidiaries-section {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .subsidiaries-section h2 {
+            color: #068c44;
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
+
+        .subsidiary {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 0px; /* Add some spacing between sections if needed */
+            background-color: #fffcf4;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .subsidiary .col-md-6 {
+            padding: 0; /* Remove padding from columns */
+        }
+
+        .subsidiary img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the image covers the entire column without distortion */
+        }
+
+        .subsidiary img {
+            width: 100%;
+            height: auto;
+        }
+
+        .subsidiary-content {
+            flex: 1;
+            padding: 40px 20px;
+        }
+
+        .subsidiary-title {
+            color: #068c44;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 50px;
+        }
+
+        .subsidiary-description {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555;
+            margin-top: 20px;
+            margin-left: 60px;
+            margin-right: 60px;
+            text-align: justify; /* Added justification */
+        }
+
+        .read-more-btn {
+            background-color: #068c44;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+            text-decoration: none; /* Remove underline from link */
+        }
+
+        .read-more-btn:hover {
+            background-color: #045c2a;
+        }
+
+        .footer {
+            background-color: #088c3c;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .footer-nav a {
+            color: #ffffff;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        .footer-nav a.active,
+        .footer-nav a:hover {
+            color: #a6ff00;
+        }
+
+        .copyright {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="Images/logo.jpg" alt="Dairy Brand Logo" class="logo me-2"> 
+    </a>
+    <ul class="nav-menu">
+        <li class="nav-item">
+            <a href="index.html">Home</a></li>
+      <li class="nav-item">
+        <a href="#">About Us</a>
+        <ul class="dropdown">
+          <li><a href="history.html">History</a></li>
+          <li><a href="focus.html">Focus</a></li>
+          <li><a href="people.html">People</a></li>
+          <li><a href="ourfarms.html">Our Farms</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a href="#">Products</a>
+        <ul class="dropdown">
+          <li><a href="freshmilk.html">Fresh Milk</a></li>
+          <li><a href="flavored.html">Flavoured Milk</a></li>
+          <li><a href="cheese.html">Cheese & Butter</a></li>
+          <li><a href="yoghurt.html">Yoghurt</a></li>
+          <li><a href="juices.html">Juices</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a href="brands.html">Brands</a>
+        <ul class="dropdown">
+          <li><a href="ambewela.html">Ambewela</a></li>
+          <li><a href="daily.html">Daily</a></li>
+          <li><a href="myjuicee.html">My Juicee</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a href="subsidiaries.html">Subsidiaries</a>
+      </li>
+      <li class="nav-item">
+        <a href="innovation.html">Innovation</a>
+      </li>
+      <li class="nav-item">
+        <a href="newscenter.html">News Center</a>
+      </li>
+      <li class="nav-item">
+        <a href="#">Investor Relations</a>
+        <ul class="dropdown">
+          <li><a href="boardofdirectors.html">Board of Directors</a></li>
+          <li><a href="reports.html">Reports</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a href="contactus.html">Contact Us</a>
+      </li>
+    </ul>
+  </nav>
+
+
+    <div class="hero-section text-center">
+        <img src="Images/slide2nw.jpg" alt="Cows in a field">
+        <div class="hero-text">
+            <h1>Brands</h1>
+        </div>
+    </div>
+
+    <!-- Brands Section -->
+    <div class="container subsidiaries-section">
+        <h2>BRANDS</h2>
+
+        <div class="subsidiary row">
+            <div class="col-md-6">
+                <img src="Images/ambewela.png" alt="Ambewela">
+            </div>
+            <div class="col-md-6 subsidiary-content">
+                <div class="subsidiary-title">AMBEWELA</div>
+                <p class="subsidiary-description" id="ambewela-description">
+                    Ambewela is a trusted brand in Sri Lanka, known for its high-quality dairy products sourced from the lush hills of the island. The farm produces fresh, creamy milk and uses modern farming techniques to ensure premium dairy nutrition. Their offerings include UHT processed milk, flavored milk in chocolate and vanilla, Set yogurt, jelly yogurt, butter, and gourmet cheeses, all packaged for convenience. Ambewela upholds its commitment to quality and innovation, consistently meeting consumer expectations for healthy, delicious dairy products.
+                </p>
+                <a href="ambewela.html" class="read-more-btn">Read More</a>
+            </div>
+        </div>
+
+        <div class="subsidiary row">
+            <div class="col-md-6 order-md-2">
+                <img src="Images/daily.png" alt="Pattipola Farm">
+            </div>
+            <div class="col-md-6 order-md-1 subsidiary-content">
+                <div class="subsidiary-title">DAILY</div>
+                <p class="subsidiary-description" id="daily-description">
+                    Lanka Dairies (Pvt) Ltd in Welisara uses premium milk from Ambewela Farms to produce UHT-treated flavored milk. It was the first product in Sri Lanka to be packaged in Tetra Pak using aseptic and UHT technology, ensuring a six-month shelf life without preservatives. The Daily flavored milk range includes classic vanilla, chocolate, fruity strawberry and banana, and unique blends like iced coffee and faluda. It’s also exported to the Maldives, especially popular among the youth.
+                </p>
+                <a href="daily.html" class="read-more-btn">Read More</a>
+            </div>
+        </div>
+
+        <div class="subsidiary row">
+            <div class="col-md-6">
+                <img src="Images/myjuiceelogo.png" alt="Ambewela Products">
+            </div>
+            <div class="col-md-6 subsidiary-content">
+                <div class="subsidiary-title">MY JUICEE</div>
+                <p class="subsidiary-description" id="myjuicee-description">
+                    My Juicee is a refreshing ready-to-drink fruit beverage that delivers a daily dose of vitamin C while satisfying your thirst. Produced at Lanka Dairies' advanced Welisara factory with high hygiene standards, it comes in apple, mango, mixed fruit, and orange flavors. Made with premium fruit pulps and concentrates, it’s available in 180ml on-the-go packs and 1-liter family packs, offering a rejuvenating, healthy drink for all ages.
+                </p>
+                <a href="myjuicee.html" class="read-more-btn">Read More</a>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <nav class="footer-nav">
+            <a href="index.html" class="active">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Products</a>
+            <a href="#">Innovation</a>
+            <a href="#">Careers</a>
+            <a href="#">Subsidiaries</a>
+            <a href="#">News Center</a>
+            <a href="#">Investor Relations</a>
+            <a href="#">Contact Us</a>
+        </nav>
+        <p class="copyright">© 2025 LANKA DAIRIES. ALL RIGHTS RESERVED</p>
+    </footer>
+
+    <script>
+        $(document).ready(function () {
+            $(".footer-nav a").click(function () {
+                $(".footer-nav a").removeClass("active");
+                $(this).addClass("active");
+            });
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

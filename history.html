@@ -82,39 +82,42 @@
 .nav-item:hover .dropdown {
   display: block;
 }
-.hero {
-    position: relative;
-    height: 100vh; /* Full viewport height */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    overflow: hidden;
-}
-
-.hero img {
-    max-width: 100vw; /* Maximum width: full viewport width */
-    max-height: 100vh; /* Maximum height: full viewport height */
-    object-fit: contain; /* Maintain aspect ratio while covering the container */
-}
-      
+.hero-section {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: visible;
+        }
+        .hero-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+        }
         .hero-text {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            text-align: center;
             color: white;
-        }
-        .hero-text h1{
-            font-size: 3rem;
+            font-size: 2rem;
             font-weight: bold;
         }
 
     .full-width-info-section {
         padding: 50px 0;
-        background: url('Images/dark1.jpg') center/cover no-repeat;
+        background: url('Images/hist2.jpg') center/cover no-repeat;
         background-size: cover;
         width: 100vw;
         color: white; /* Ensures text is readable on the background */
@@ -178,7 +181,7 @@ h3 {
 .timeline-item.bottom .content {
   text-align: justify;
   max-width: 400px;
-  margin: 0 auto;
+  margin: -70px auto;
 }
 .timeline-item .content h5 {
   font-size: 1.4rem;  /* Heading size for each timeline event */
@@ -224,7 +227,7 @@ h3 {
 .timeline-item .content {
   background: #f8fcdc;
   border-radius: 10px;
-  
+  margin-top: 40px;
   padding: 20px;
   z-index: 1;
 }
@@ -257,13 +260,13 @@ h3 {
     .timeline-year-left {
       position: absolute;
       top: 12px;
-      left: calc(50% - 110px);
+      left: calc(50% - 140px);
       margin: 30px;
     }
     .timeline-year-right {
       position: absolute;
       top: 12px;
-      left: calc(50% + 60px);
+      left: calc(50% + 10px);
       margin: 30px;
     }
 .footer {
@@ -297,67 +300,67 @@ h3 {
 <body>
     <!-- Navbar -->
     <nav class="navbar">
-        <a class="navbar-brand d-flex align-items-center" href="#">
-            <img src="Images/logo.jpg" alt="Dairy Brand Logo" class="logo me-2"> 
-        </a>
-        <ul class="nav-menu">
-            <li class="nav-item">
-                <a href="index.html">Home</a></li>
+      <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="Images/logo.jpg" alt="Dairy Brand Logo" class="logo me-2"> 
+      </a>
+      <ul class="nav-menu">
           <li class="nav-item">
-            <a href="#">About Us</a>
-            <ul class="dropdown">
-              <li><a href="history.html">History</a></li>
-              <li><a href="focus.html">Focus</a></li>
-              <li><a href="people.html">People</a></li>
-              <li><a href="#">Our Farms</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a href="#">Products</a>
-            <ul class="dropdown">
-              <li><a href="freshmilk.html">Fresh Milk</a></li>
-              <li><a href="flavored.html">Flavoured Milk</a></li>
-              <li><a href="cheese.html">Cheese & Butter</a></li>
-              <li><a href="yoghurt.html">Yoghurt</a></li>
-              <li><a href="juices.html">Juices</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a href="#">Brands</a>
-            <ul class="dropdown">
-              <li><a href="#">Ambewela</a></li>
-              <li><a href="#">Daily</a></li>
-              <li><a href="#">My Juicee</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a href="subsidiaries.html">Subsidiaries</a>
-          </li>
-          <li class="nav-item">
-            <a href="#">Innovation</a>
-          </li>
-          <li class="nav-item">
-            <a href="#">News Center</a>
-          </li>
-          <li class="nav-item">
-            <a href="#">Investor Relations</a>
-            <ul class="dropdown">
-              <li><a href="#">Board of Directors</a></li>
-              <li><a href="#">Reports</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a href="#">Contact Us</a>
-          </li>
-        </ul>
-      </nav>
-
+              <a href="index.html">Home</a></li>
+        <li class="nav-item">
+          <a href="#">About Us</a>
+          <ul class="dropdown">
+            <li><a href="history.html">History</a></li>
+            <li><a href="focus.html">Focus</a></li>
+            <li><a href="people.html">People</a></li>
+            <li><a href="ourfarms.html">Our Farms</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="#">Products</a>
+          <ul class="dropdown">
+            <li><a href="freshmilk.html">Fresh Milk</a></li>
+            <li><a href="flavored.html">Flavoured Milk</a></li>
+            <li><a href="cheese.html">Cheese & Butter</a></li>
+            <li><a href="yoghurt.html">Yoghurt</a></li>
+            <li><a href="juices.html">Juices</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="brands.html">Brands</a>
+          <ul class="dropdown">
+            <li><a href="ambewela.html">Ambewela</a></li>
+            <li><a href="daily.html">Daily</a></li>
+            <li><a href="myjuicee.html">My Juicee</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="subsidiaries.html">Subsidiaries</a>
+        </li>
+        <li class="nav-item">
+          <a href="innovation.html">Innovation</a>
+        </li>
+        <li class="nav-item">
+          <a href="newscenter.html">News Center</a>
+        </li>
+        <li class="nav-item">
+          <a href="#">Investor Relations</a>
+          <ul class="dropdown">
+            <li><a href="boardofdirectors.html">Board of Directors</a></li>
+            <li><a href="reports.html">Reports</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="contactus.html">Contact Us</a>
+        </li>
+      </ul>
+    </nav>
+  
     <!-- Hero Section -->
     <div class="hero-section text-center">
-        <img src="Images/slide2nw.jpg" alt="Cows in a field">
-        <div class="hero-text">
-            <h1></h1>
-        </div>
+        <video class="hero-video" autoplay muted loop>
+            <source src="video/history.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     </div>
 
     <!-- Science and Innovation Section -->
@@ -376,36 +379,160 @@ h3 {
     <div class="container my-5">
         <h2 class="text-center mb-4">OUR FOUNDING STORY</h2>
         <div class="timeline">
-          <!-- First item (Left) -->
+          <!-- First item (Right) -->
           <div class="timeline-item right">
             <div class="dotted-line-right"></div>
-          <div class="timeline-year-right">1996</div>
+          <div class="timeline-year-right">1994</div>
             <div class="content">
-              <img src="Images/ambewelafarms.png" alt="Lanka Diaries">
-              <h5>Lanka Diaries (Pvt) Ltd (1996)</h5>
-              <p>A subsidiary named Lanka Diaries (Pvt) Ltd was established where milk in 2001 was packed in flavored liquid milk utilizing the UHT Tetra pack technology. It is the first company in Sri Lanka to do so.</p>
+              <img src="Images/ambewelafarms.png" alt="">
+              <h5></h5>
+              <p>Incorporation of Lanka Dairies (Pvt) Limited (LDL) as the first subsidiary of Lanka Milk Foods (CWE) PLC and the pioneer in utilizing TetraPak technology for packing of raw milk
+
+              </p>
               
             </div>
           </div>
           
-          <!-- Second item (Right) -->
+          <!-- Second item (Left) -->
+          <div class="timeline-item left">
+            <div class="dotted-line-left"></div>
+          <div class="timeline-year-left">1996</div>
+            <div class="content">
+              <img src="Images/ambewelafarms.png" alt="">
+              <h5></h5>
+              <p>Commissioning the Lanka Dairies manufacturing facility with a USD 2.5mn worth initial investment.<br>
+                Dairy flavoured milk was introduced to the Sri Lankan market, initially with Chocolate and Vanilla variants. 
+                </p>
+              
+            </div>
+          </div>
+
+          <div class="timeline-item right">
+            <div class="dotted-line-right"></div>
+          <div class="timeline-year-right">1999-2001</div>
+            <div class="content">
+              <img src="Images/ambewelafarms.png" alt="">
+              <h5></h5>
+              <p> Capacity enhancement and upgrade of factory with an investment worth USD 1.5 Mn.<br>
+                My Juicee fruit nectar was introduced to the market
+            </p>
+              
+            </div>
+          </div>
+
           <div class="timeline-item left">
             <div class="dotted-line-left"></div>
           <div class="timeline-year-left">2001</div>
             <div class="content">
-              <img src="Images/ambewelafarms.png" alt="Farms">
-              <h5>The New Zealand and Ambewela Farms (2001)</h5>
-              <p>The New Zealand and Ambewela farms in Nuwara Eliya were brought over from the government. These farms are among the largest farms in the country up to date.</p>
+              <img src="Images/ambewelafarms.png" alt="">
+              <h5></h5>
+              <p>Obtaining ISO 9001: 2000 certification for Quality Management Systems<br>
+                Acquisition of Ambewela Farm and New Zealand Farm from the Government and establishment of Ambewela Livestock Company and Pattipola Livestock Company<br>
+                Ambewela Fresh milk product launch, the leading brand of the company</p>
               
             </div>
           </div>
+
+          <div class="timeline-item right">
+            <div class="dotted-line-right"></div>
+          <div class="timeline-year-right">2006</div>
+            <div class="content">
+              <img src="Images/ambewelafarms.png" alt="">
+              <h5></h5>
+              <p>Establishment of Ambewela Products (Pvt) Limited
+              </p>
+              
+            </div>
+          </div>
+
+          <div class="timeline-item left">
+            <div class="dotted-line-left"></div>
+          <div class="timeline-year-left">2009</div>
+            <div class="content">
+              <img src="Images/ambewelafarms.png" alt="">
+              <h5></h5>
+              <p>Commencing Ambewela Yoghurt Production
+              </p>
+              
+            </div>
+          </div>
+
+          <div class="timeline-item right">
+            <div class="dotted-line-right"></div>
+          <div class="timeline-year-right">2010</div>
+            <div class="content">
+              <img src="Images/ambewelafarms.png" alt="">
+              <h5></h5>
+              <p>Upgrading milk reception, storage, and processing equipment worth - EU 295,000<br>
+                Commencement of exporting Lanka Dairies products to the Maldives market<br>
+                ISO 9001: 2008 (Quality Management Systems - Revision)</p>
+              
+            </div>
+          </div>
+
+          <div class="timeline-item left">
+            <div class="dotted-line-left"></div>
+          <div class="timeline-year-left">2013</div>
+            <div class="content">
+              <img src="Images/ambewelafarms.png" alt="">
+              <h5></h5>
+              <p>Capacity enhancement and upgrade of LDL factory with an investment worth USD 6 Mn<br>
+                Introducing Kiddos 160ml, flavoured milk to the new product portfolio focusing on the kids
+            </p>
+              
+            </div>
+          </div>
+
+          <div class="timeline-item right">
+            <div class="dotted-line-right"></div>
+          <div class="timeline-year-right">2018</div>
+            <div class="content">
+              <img src="Images/ambewelafarms.png" alt="">
+              <h5></h5>
+              <p>Obtaining ISO 22000: 2005 (Food Safety Management System)<br>
+                Establishment of United Dairies Lanka (Pvt) Limited<br>
+                Strategic investment of LKR 5.6 billion to develop and expand herd and milking facilities at both farms
+            </p>
+              
+            </div>
+          </div>
+
+          <div class="timeline-item left">
+            <div class="dotted-line-left"></div>
+          <div class="timeline-year-left">2020</div>
+            <div class="content">
+              <img src="Images/ambewelafarms.png" alt="">
+              <h5></h5>
+              <p> Reached 10 million litres of annual milk production
+              </p>
+              
+            </div>
+          </div>
+
+          <div class="timeline-item right">
+            <div class="dotted-line-right"></div>
+          <div class="timeline-year-right">2021</div>
+            <div class="content">
+              <img src="Images/ambewelafarms.png" alt="">
+              <h5></h5>
+              <p>Celebrating 25 years in operations<br>
+                ISO 22000: 2018 (Food Safety Management System - Revision)
+                Current active FSMS
+            </p>
+              
+            </div>
+          </div>
+
+          
           
           <!-- Third item (Center/Down) -->
           <div class="timeline-item bottom">
             <div class="content">
-              <img src="Images/ambewelafarms.png" alt="Ambewela Products">
-              <h5>Ambewela Products (Pvt) Ltd (2009)</h5>
-              <p>A new subsidiary established under Ambewela Products (Pvt) Ltd.</p>
+              <div class="timeline-year-right">2023</div>
+              <img src="Images/ambewelafarms.png" alt="">
+              <h5></h5>
+              <p>Commencement of operations of the two UDL farm extensions at ALC Farms and PLC Farms<br>
+                Reached 15 million litres of annual milk production</p>
              
             </div>
           </div>

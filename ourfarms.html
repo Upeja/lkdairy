@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Farms</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8fcdc;
+        }
+        .navbar {
+  background-color: #8bc34a; /* Green color */
+  display: flex;
+  align-items: center;
+  padding: 0px 20px;
+}
+
+.logo {
+    height: 80px;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  margin-right: auto;
+  margin-top: -5px;
+  margin-bottom: -10px;
+  border-radius: 5px;
+  margin-left: 30px;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-item a {
+  display: block;
+  padding: 10px 15px;
+  color: white;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.nav-item a:hover {
+  background-color: #689f38; /* Darker green on hover */
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #8bc34a;
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  min-width: 150px;
+  z-index: 1000;
+}
+
+.dropdown li a {
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  display: block;
+  transition: background 0.3s;
+}
+
+.dropdown li a:hover {
+  background-color: #558b2f;
+}
+
+.nav-item:hover .dropdown {
+  display: block;
+}
+.hero-section {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: visible;
+        }
+        .hero-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+        }
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .subsidiaries-section {
+      padding: 50px 0;
+      text-align: center;
+    }
+    .subsidiaries-section h2 {
+      color: #068c44;
+      font-weight: bold;
+      margin-bottom: 40px;
+    }
+    .subsidiary {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 0px; /* Add some spacing between sections if needed */
+  background-color: #fffcf4;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.subsidiary .col-md-6 {
+  padding: 0; /* Remove padding from columns */
+}
+
+.subsidiary img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the entire column without distortion */
+}
+    .subsidiary img {
+      width: 100%;
+      height: auto;
+    }
+    .subsidiary-content {
+      
+      flex: 1;
+      padding: 40px 20px;
+    }
+    .subsidiary-title {
+  color: #068c44;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 50px;
+}
+
+.subsidiary-description {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+  margin-top: 20px;
+  margin-left: 60px;
+  margin-right: 60px;
+  text-align: justify; /* Added justification */
+}
+
+.footer {
+    background-color: #088c3c;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-nav a {
+    color: #ffffff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;}
+
+        .footer-nav a.active,
+        .footer-nav a:hover {
+            color: #a6ff00;
+            /* Highlighted Green */
+        }
+
+        .copyright {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+</style>
+</head>
+<body>
+  <nav class="navbar">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="Images/logo.jpg" alt="Dairy Brand Logo" class="logo me-2"> 
+    </a>
+    <ul class="nav-menu">
+        <li class="nav-item">
+            <a href="index.html">Home</a></li>
+      <li class="nav-item">
+        <a href="#">About Us</a>
+        <ul class="dropdown">
+          <li><a href="history.html">History</a></li>
+          <li><a href="focus.html">Focus</a></li>
+          <li><a href="people.html">People</a></li>
+          <li><a href="ourfarms.html">Our Farms</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a href="#">Products</a>
+        <ul class="dropdown">
+          <li><a href="freshmilk.html">Fresh Milk</a></li>
+          <li><a href="flavored.html">Flavoured Milk</a></li>
+          <li><a href="cheese.html">Cheese & Butter</a></li>
+          <li><a href="yoghurt.html">Yoghurt</a></li>
+          <li><a href="juices.html">Juices</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a href="brands.html">Brands</a>
+        <ul class="dropdown">
+          <li><a href="ambewela.html">Ambewela</a></li>
+          <li><a href="daily.html">Daily</a></li>
+          <li><a href="myjuicee.html">My Juicee</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a href="subsidiaries.html">Subsidiaries</a>
+      </li>
+      <li class="nav-item">
+        <a href="innovation.html">Innovation</a>
+      </li>
+      <li class="nav-item">
+        <a href="newscenter.html">News Center</a>
+      </li>
+      <li class="nav-item">
+        <a href="#">Investor Relations</a>
+        <ul class="dropdown">
+          <li><a href="boardofdirectors.html">Board of Directors</a></li>
+          <li><a href="reports.html">Reports</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a href="contactus.html">Contact Us</a>
+      </li>
+    </ul>
+  </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section text-center">
+      <video class="hero-video" autoplay muted loop>
+          <source src="video/farms.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+      </video>
+  </div>
+
+    <div class="container subsidiaries-section">
+        <h2>OUR FARMS</h2>
+      
+        <div class="subsidiary row">
+          <div class="col-md-6">
+            <img src="Images/ambewelafarms.png" alt="Ambewela Farm">
+          </div>
+          <div class="col-md-6 subsidiary-content">
+            <div class="subsidiary-title">Lanka Dairies Ltd. (LDL)</div>
+            <p class="subsidiary-description">
+              Production of fresh milk, non-fat milk, Daily milk, Ambewela Flavoured milk, My Juuicee products, all of which are packaged in Tetra Packs.</p>
+          </div>
+        </div>
+      
+        <div class="subsidiary row">
+          <div class="col-md-6 order-md-2">
+            <img src="Images/ambewelafarms.png" alt="Pattipola Farm">
+          </div>
+          <div class="col-md-6 order-md-1 subsidiary-content">
+            <div class="subsidiary-title">Ambewela Products (Pvt) Ltd. (APL)</div>
+            <p class="subsidiary-description">
+              Production of Yogurt, Cheese, Butter, and fresh milk & Ambewela Flavored milk, which are packaged in Pouch packs.<br>Owns/Holds the recently upgraded dairy farm complex of 300 dairy cows located in Ambewela.</p>
+          </div>
+        </div>
+      
+        <div class="subsidiary row">
+          <div class="col-md-6">
+            <img src="Images/ambewelafarms.png" alt="Ambewela Products">
+          </div>
+          <div class="col-md-6 subsidiary-content">
+            <div class="subsidiary-title">Ambewela Livestock Company Ltd. (ALC)</div>
+            <p class="subsidiary-description">
+              Owns the leasehold rights to the Ambewela farm lands from the GoSL.
+            </p>
+          </div>
+        </div>
+
+        <div class="subsidiary row">
+          <div class="col-md-6 order-md-2">
+            <img src="Images/ambewelafarms.png" alt="Pattipola Farm">
+          </div>
+          <div class="col-md-6 order-md-1 subsidiary-content">
+            <div class="subsidiary-title">Pattipola Livestock Company Ltd. (PLC)</div>
+            <p class="subsidiary-description">
+              Owns the leasehold rights to the Pattipola (New Zealand) farm lands from the GoSL
+
+            </p>
+          </div>
+        </div>
+      
+        <div class="subsidiary row">
+          <div class="col-md-6">
+            <img src="Images/ambewelafarms.png" alt="Ambewela Products">
+          </div>
+          <div class="col-md-6 subsidiary-content">
+            <div class="subsidiary-title">United Dairies Lanka Ltd. (UDL)
+            </div>
+            <p class="subsidiary-description">
+              Invested in state-of-the-art dairy farm complexes in ALC and PLC Farms.<br>
+              Owns the leasehold rights of ALC and PLC farm lands.<br>
+              Complete management of the dairy farm complexes at ALC, PLC and APL farms</p>
+          </div>
+        </div>
+      
+      </div>
+
+      <footer class="footer">
+        <div class="container">
+            <nav class="footer-nav">
+                <a href="index.html">Home</a>
+                <a href="">About Us</a>
+                <a href="" >Products</a>
+                <a href="" class="active">Innovation</a>
+                <a href="">Careers</a>
+                <a href="">Subsidiaries</a>
+                <a href="#">News Center</a>
+                <a href="#">Investor Relations</a>
+                <a href="#">Contact Us</a>
+            </nav>
+            <p class="copyright">© 2025 LANKA DAIRIES. ALL RIGHTS RESERVED</p>
+        </div>
+    </footer>
+    <script>
+    $(document).ready(function () {
+        $(".footer-nav a").click(function () {
+            $(".footer-nav a").removeClass("active");
+            $(this).addClass("active");
+        });
+    });
+</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

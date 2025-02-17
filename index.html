@@ -534,6 +534,23 @@
     margin-top: 20px;
 }
 
+.news-read-more-btn {
+        display: inline-block;
+        background-color: #28a745; /* Green to differentiate from other buttons */
+        color: #fff;
+        padding: 12px 24px;
+        font-size: 16px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background-color 0.3s ease-in-out, transform 0.2s;
+    }
+
+    .news-read-more-btn:hover {
+        background-color: #218838;
+        transform: scale(1.05);
+    }
+
 .footer-nav a {
     color: #ffffff;
     margin: 0 10px;
@@ -545,13 +562,13 @@
 .footer-nav a:hover {
     color: #a6ff00;
 }
-
+ 
 .copyright {
     margin-top: 10px;
     font-size: 14px;
 }
 
-    </style>
+   </style>
 </head>
 <body>
     
@@ -568,7 +585,7 @@
               <li><a href="history.html">History</a></li>
               <li><a href="focus.html">Focus</a></li>
               <li><a href="people.html">People</a></li>
-              <li><a href="#">Our Farms</a></li>
+              <li><a href="ourfarms.html">Our Farms</a></li>
             </ul>
           </li>
           <li class="nav-item">
@@ -582,31 +599,31 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a href="#">Brands</a>
+            <a href="brands.html">Brands</a>
             <ul class="dropdown">
-              <li><a href="#">Ambewela</a></li>
-              <li><a href="#">Daily</a></li>
-              <li><a href="#">My Juicee</a></li>
+              <li><a href="ambewela.html">Ambewela</a></li>
+              <li><a href="daily.html">Daily</a></li>
+              <li><a href="myjuicee.html">My Juicee</a></li>
             </ul>
           </li>
           <li class="nav-item">
             <a href="subsidiaries.html">Subsidiaries</a>
           </li>
           <li class="nav-item">
-            <a href="#">Innovation</a>
+            <a href="innovation.html">Innovation</a>
           </li>
           <li class="nav-item">
-            <a href="#">News Center</a>
+            <a href="newscenter.html">News Center</a>
           </li>
           <li class="nav-item">
             <a href="#">Investor Relations</a>
             <ul class="dropdown">
-              <li><a href="#">Board of Directors</a></li>
-              <li><a href="#">Reports</a></li>
+              <li><a href="boardofdirectors.html">Board of Directors</a></li>
+              <li><a href="reports.html">Reports</a></li>
             </ul>
           </li>
           <li class="nav-item">
-            <a href="#">Contact Us</a>
+            <a href="contactus.html">Contact Us</a>
           </li>
         </ul>
       </nav>
@@ -821,6 +838,12 @@
                 </div>
             </div>
         </div>
+
+        <div class="text-center mt-4">
+            <a href="newscenter.html" class="news-read-more-btn">Read More</a>
+        </div>
+
+
     </section>
     
     
@@ -828,21 +851,21 @@
     
     
     <footer class="footer">
-        <div class="container">
-            <nav class="footer-nav">
-                <a href="index.html" class="active">Home</a>
-                <a href="#">About Us</a>
-                <a href="#">Products</a>
-                <a href="#">Innovation</a>
-                <a href="#">Careers</a>
-                <a href="#">Subsidiaries</a>
-                <a href="#">News Center</a>
-                <a href="#">Investor Relations</a>
-                <a href="#">Contact Us</a>
-            </nav>
-            <p class="copyright">© 2025 LANKA DAIRIES. ALL RIGHTS RESERVED</p>
-        </div>
-    </footer>
+        
+        <nav class="footer-nav">
+            <a href="index.html" class="active">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Products</a>
+            <a href="#">Innovation</a>
+            <a href="#">Careers</a>
+            <a href="#">Subsidiaries</a>
+            <a href="#">News Center</a>
+            <a href="#">Investor Relations</a>
+            <a href="#">Contact Us</a>
+        </nav>
+        <p class="copyright">© 2025 LANKA DAIRIES. ALL RIGHTS RESERVED</p>
+    
+</footer>
     <script>
         function openArticle(articleId) {
             window.location.href = `news-details.html?article=${articleId}`;
@@ -879,5 +902,8 @@
         });
     });
     </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
