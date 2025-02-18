@@ -198,7 +198,7 @@ h3 {
   color: #222222;       /* Soft gray for better readability */
   line-height: 1.6;  /* Improved line spacing */
   margin-bottom: 10px;
-  margin-top: 20px;
+  margin-top: 30px;
   margin-left: 10px;
   margin-right: 10px;
 }
@@ -251,7 +251,8 @@ h3 {
       left: calc(50% + 4px);
     }
     .timeline-year-left,
-    .timeline-year-right {
+    .timeline-year-right,
+    .timeline-year-bottom {
       font-weight: bold;
       font-size: 1.8rem;
       color: #068c44;
@@ -268,6 +269,13 @@ h3 {
       top: 12px;
       left: calc(50% + 10px);
       margin: 30px;
+    }
+    .timeline-year-bottom {
+      position: absolute;
+      top: 0px;
+      left: calc(50% + -60px);
+      margin: 30px;
+      
     }
 .footer {
             background-color: #088c3c;
@@ -523,17 +531,16 @@ h3 {
             </div>
           </div>
 
-          
-          
-          <!-- Third item (Center/Down) -->
-          <div class="timeline-item bottom">
+            <!-- Third item (Center/Down) -->
+            <div class="timeline-item bottom">
+            
+            <div class="timeline-year-bottom">2023</div>
             <div class="content">
-              <div class="timeline-year-right">2023</div>
               <img src="" alt="">
               <h5></h5>
               <p>Commencement of operations of the two UDL farm extensions at ALC Farms and PLC Farms<br>
-                Reached 15 million litres of annual milk production</p>
-             
+              Reached 15 million litres of annual milk production</p>
+            </div>
             </div>
           </div>
         </div>
